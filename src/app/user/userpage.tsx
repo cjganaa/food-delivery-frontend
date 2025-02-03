@@ -1,12 +1,12 @@
 "use client";
-import { Footer } from "./../_component/footer";
-import { Header } from "./../_component/header";
+import { Footer } from "../_component/footer";
+import { Header } from "../_component/header";
 import { ChevronLeft,ChevronRight } from "lucide-react";
 import { useState ,useEffect } from "react";
-import { CategoryType } from "./../types";
+import { CategoryType } from "../types";
 import { CategoryCard } from "./cards/categoty";
 
-export default function Home() {
+export function UserPage() {
   const [categories, setCategories] = useState<CategoryType[]>([]);
   async function getCategories() {
     const res = await fetch(
